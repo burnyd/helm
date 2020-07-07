@@ -1,0 +1,17 @@
+apiVersion: helm.operator-sdk/v1alpha1
+kind: Cloudeos
+metadata:
+  name: example-cloudeos
+spec:
+  # Default values copied from <project_dir>/helm-charts/cloudeos/values.yaml
+  
+  configmap:
+    name: cloudeos-configmap
+  daemonset:
+    containername: aristanetworks/cloudeos:jakarta-rel.march23
+    initcontainer: aristanetworks/cloudeos-init:0.11
+    name: cloudeos
+    namespace: kube-system
+  rbac:
+    name: cloudeos-rbac
+  

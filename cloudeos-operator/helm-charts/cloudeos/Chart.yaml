@@ -1,0 +1,5 @@
+apiVersion: v2
+description: A cloudeos deployment for kubernetes
+name: cloudeos
+type: application
+version: 0.0.1
